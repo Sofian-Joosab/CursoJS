@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #resultado{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>condicoes simples de javascritp</h1>
+    <input type="number" name="speede" id="speed">
+    <input type="button" value="Verificar" onclick="calculate()">
+    <div id="resultado"></div>
+    <script>
+        function calculate() {
+            var vel = document.getElementById('speed')
+             var res = document.getElementById('resultado')
+            var speedy = Number(vel.value)
+        res.innerHTML = `a sua velocidade e de ${speedy}`
+
+        if (speedy > 60) {
+            res.innerHTML = `Excedeu a velocidade! paga la 2 mil vamos esquecer isso`
+        }else{
+            res.innerHTML = `Pode passar chefe`
+        }
+            res.innerHTML += `<p>Nao esquece cinto boisys</p>`
+        }
+        
+    </script>
+</body>
+</html>
