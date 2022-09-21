@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Additions</h1>
+    <input type="number" name="numb1" id="numb1">
+    <input type="number" name="numb2" id="numb2">
+    <input type="button" value="Sum" onclick="sum()">
+    <div id="result">Resultado</div>
+
+    <script>
+            function sum(){
+                var numb1 = window.document.getElementById('numb1')
+                var numb2 = window.document.getElementById('numb2')
+                var res = window.document.getElementById('result')
+                var n1 = Number(numb1.value)
+                var n2 = Number(numb2.value)
+                var s = n1 + n2
+                res.innerHTML = `A some de ${n1} + ${n2} e igual a ${s}` 
+            }
+    </script>
+</body>
+</html>
