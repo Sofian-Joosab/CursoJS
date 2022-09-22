@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+            margin-top: 20px;
+        }
+        input{
+            margin-top: 30px;
+        }
+        #dados{
+           width: 500px;
+           margin: auto;
+           border-radius: 10px;
+           padding: 20px;
+           background-color: white;
+           box-shadow: 3px 3px 10px rgba(0, 0, 0, 363);
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <h1> Vamos contar!</h1>
+    <div id="dados">
+        <p>Inicio <input type="number" name="incio" id="txti"></p>
+        <p>Fim: <input type="number" name="Fim" id="txtf"></p>
+        <p>Passo: <input type="number" name="passo" id="txtp"></p>
+        <p><input type="button" value="contar" onclick="contar()">
+        
+            <div id="contagem">
+                Preparando a contagem
+            </div>
+    </div>
+        
+    
+
+    <script>
+        function contar() {
+            var ini = document.getElementById('txti')
+            var fim = document.getElementById('txtf')
+            let passo = document.getElementById('txtp')
+            let conta = document.getElementById('contagem')
+
+            if (ini.value.length == 0 || fim.value.length == 0 || passo.value.lenght == 0) {
+                window.alert("Erro faltam numeros no formulariooox")
+                
+            }else{
+                conta.innerHTML = 'Contando: '
+                let i = Number(ini.value)
+                let f = Number(fim.value)
+                let p = Number(passo.value)
+
+                for (let c = i; c <= f; c += p) {
+                  conta.innerHTML += ` ${c} `
+                    
+                }
+
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>
