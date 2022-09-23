@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #center{
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section id="center">
+        <div id="results">
+            
+        </div>
+    </section>
+
+    <script>
+        let num = [1, 5, 4, 3, 7, 8]
+        let disp = window.document.getElementById('results')
+
+        for (let pos in num) {
+            disp.innerHTML =`A posicao ${pos} tem o valor ${num[pos]}`
+        }
+    </script>
+</body>
+</html>
